@@ -1,0 +1,23 @@
+<Context>
+	<Resource
+		name="jdbc/OracleDB"
+		
+		auth="Container" 
+	
+		driverClassName="oracle.jdbc.driver.OracleDriver" 
+	
+		type="javax.sql.DataSource" 
+	
+		url="jdbc:oracle:thin:@127.0.0.1:1521:XE" 
+	
+		username="ye_table"
+
+		password="ye1234"
+	
+		maxActive="20"
+	
+		maxIdle="10" 
+	
+		maxWait="-1"
+	/>
+</Context> <!-- 얘를 이제 web.xml에서 읽어와야함. -->
