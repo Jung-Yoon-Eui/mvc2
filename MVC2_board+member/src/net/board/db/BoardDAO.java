@@ -21,13 +21,13 @@ public class BoardDAO {
 	// 메소드 종류
 	// 글의 개수 구하기. 	getListCount
 	// 글 목록 보기.		getBoardList
-	// 게시글 확인.			getDetail
-	// 글 등록.			boardInsert
-	// 글 답변.			boardReply
-	// 글 수정.			boardModify
+	// 게시글 확인.		getDetail
+	// 글 등록.		boardInsert
+	// 글 답변.		boardReply
+	// 글 수정.		boardModify
 	// 글 삭제	.		boardDelete
-	// 조회수 업데이트.		setReadCountUpdate
-	// 글쓴이인지 확인.		isBoardWriter
+	// 조회수 업데이트.	setReadCountUpdate
+	// 글쓴이인지 확인.	isBoardWriter
 	
 	
 	// 커넥션 풀 (Connection Pool) : 생성자에 넣어서 매번 초기화.
@@ -113,8 +113,7 @@ public class BoardDAO {
 		BoardBean board = null;
 		
 		try{
-			pstmt = conn.prepareStatement(
-					"select * from board where BOARD_NUM = ?");
+			pstmt = conn.prepareStatement("select * from board where BOARD_NUM = ?");
 			pstmt.setInt(1, num);
 			
 			rs= pstmt.executeQuery();

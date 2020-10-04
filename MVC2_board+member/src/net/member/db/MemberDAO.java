@@ -100,7 +100,10 @@ public class MemberDAO {
 	// 회원 목록 보기 getList
 	public List getList() {
 		
-		String sql = "SELECT user_no, idid, name1 FROM MEMBER0921 order by user_no";
+		String sql = "SELECT  p.pizza_code, p. pizza_name, p.pizza_price, n.standard, n.weight, n.total_weight," + 
+							"n.calorie, n.protein, n.saturated_fat, n.salt, n.sugars FROM pizza p, nutrient_pizza n "+
+					 "WHERE p.pizza_code=n.pizza_code(+) "+
+					 "ORDER BY p.pizza_code";
 	
 		List list = new ArrayList();
 		
